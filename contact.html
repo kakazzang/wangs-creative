@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--    fontawsome-->
     <script src="https://kit.fontawesome.com/5c9f2dfb26.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <link href="dist/css/lightbox.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
     <!-- Chang the Index to your file name: Home or About-->
@@ -19,10 +21,10 @@
         <div class="skip"><a href="#main">Skip to Main Content</a>
         </div>
         <h5><a href="index.html">jingting wang</a></h5>
-        <nav class ="hamburgerMenu">
+        <nav>
             <input id="menuToggle" type="checkbox">
             <label class ="menuBtn" for="menuToggle">
-                <span></span>
+                <span><p>menu</p></span>
             </label>
             <ul class="nav_links">
                 <li class="nav_items"><a href="index.html">HOME</a></li>
@@ -33,11 +35,37 @@
             </ul>
         </nav>
     </header>
-    <main>
+
+    <main id="main">
         <div>
             <h2>CONTACT</h2>
         </div>
+        <div class="contactContainer">
+            <form action="">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email..">
+              
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+              <input type="submit" value="Submit">
+            </form>
+          </div>
     </main>
+
     <footer class="footer">
         <p>jingting wang</p>
         <div class="footIcon">

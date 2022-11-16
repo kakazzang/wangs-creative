@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -21,13 +21,14 @@
         <div class="skip"><a href="#main">Skip to Main Content</a>
         </div>
         <h5><a href="index.html">jingting wang</a></h5>
-        <nav class ="hamburgerMenu">
+        <nav>
+            <!-- <label for='menuToggle'>Menu</label> -->
             <input id="menuToggle" type="checkbox">
             <label class ="menuBtn" for="menuToggle">
-                <span></span>
+                <span><p>menu</p></span>
             </label>
             <ul class="nav_links">
-                <li class="nav_items"><a href="index.html">HOME</a></li>
+                <li class="nav_items active"><a href="index.html">HOME</a></li>
                 <li class="nav_items"><a href="about.html">ABOUT</a></li>
                 <li class="nav_items"><a href="portfolio.html">PORTFOLIO</a></li>
                 <li class="nav_items"><a href="blog.html">BLOG</a></li>
@@ -36,17 +37,17 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <div class="container1">
             <img class="bg2" src="images/bg2.jpeg" alt="">
             <div class="mainNum1">
-                <p>01</p>
+                <p>00</p>
             </div>
             <div class="heading">
                 <h1>WANG'S CREATIVE</h1>
             </div>
             <div class="subHeading">
-                <h5>design for users, work for passion</h5>
+                <h2>design for users, work for passion</h2>
             </div>
             <div class="introText">
                 <p>scroll to</p>
@@ -54,8 +55,8 @@
                 <img src="images/button.png" alt="button">
             </div>
         </div>
-        <div class="container2">
-            <img class="main1" id="home1" src="images/main1.jpg" alt="homepage image one">
+        <div class="container2" id="home1">
+            <img class="main1" src="images/main1.jpg" alt="homepage image one">
             <div class="main1Deco">
                 <p>DESIGN CHANGE THE WORLD</p>
             </div>
@@ -69,7 +70,8 @@
             </div>
             <div class="main2text">
                 <p>The “About” section of any personal website can be a slog. A drain. A hassle. You’ve already created a whole website about yourself, so it can be difficult to muster the strength to write that final description of who you are and what you’re about.
-                    The “About” section of any personal website can be a slog. A drain. A hassle. You’ve already created a whole website about yourself, so it can be difficult to muster the strength to write that final description of who you are and what you’re about.
+                    </p>
+                <p>The “About” section of any personal website can be a slog. A drain. A hassle. You’ve already created a whole website about yourself, so it can be difficult to muster the strength to write that final description of who you are and what you’re about.
                     </p>
             </div>
         </div>
@@ -86,11 +88,11 @@
                 </p>
             </div>
         </div>
-        <p class ="text-center">
-            <a class="mainBtn btn3" href="#">view blogs</a></p>
+        <div class ="text-center">
+            <p><a class="mainBtn btn3" href="#">view blogs</a></p>
         </div>
         <p class="text-center">
-            <a class="contact" href="#">contact me</a></p>
+            <a class="contact" href="contact.html">contact me</a></p>
     </main>
 
     <footer class="footer">

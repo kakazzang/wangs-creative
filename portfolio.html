@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--    fontawsome-->
     <script src="https://kit.fontawesome.com/5c9f2dfb26.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <link href="dist/css/lightbox.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
     <!-- Chang the Index to your file name: Home or About-->
@@ -20,10 +22,10 @@
             <a href="#main">Skip to Main Content</a>
         </div>
         <h5><a href="index.html">jingting wang</a></h5>
-        <nav class ="hamburgerMenu">
+        <nav>
             <input id="menuToggle" type="checkbox">
             <label class ="menuBtn" for="menuToggle">
-                <span></span>
+                <span><p>menu</p></span>
             </label>
             <ul class="nav_links">
                 <li class="nav_items"><a href="index.html">HOME</a></li>
@@ -34,7 +36,8 @@
             </ul>
         </nav>
     </header>
-    <main>
+
+    <main id="main">
         <div>
             <h2>PORTFOLIO</h2>
         </div>
@@ -42,14 +45,20 @@
             <div class="portfolioImg1">
                 <img src="images/portfolio1.jpg" alt="">
             </div>
+            <div class="portfolioUXtext">
+                <p>UX Design</p>
+            </div>
             <div class="portfolioUX">
-                <p class="portfolioText"><a href="UX design.html">More</a></p>
+                <a class="mainBtn portfolioBtn" href="UXDesign.html">More</a>
             </div>
             <div class="portfolioImg2">
                 <img src="images/portfolio2.jpg" alt="">
             </div>
+            <div class="portfolioGraphictext">
+                <p>Graphic Design</p>
+            </div>
             <div class="portfolioGraphic">
-                <p class="portfolioText"><a href="graphic design.html">More</a></p>
+                <a class="mainBtn portfolioBtn" href="GraphicDesign.html">More</a>
             </div>
         </div>
     </main>

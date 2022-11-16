@@ -1,3 +1,5 @@
+
+
 body{
     background-image: url("../images/background.jpg");
 }
@@ -19,7 +21,6 @@ h2{
     margin: 40px 0 40px 0;
     letter-spacing: 3px;
 }
-
 
 .skip a{
     background: white;
@@ -96,11 +97,17 @@ header h5{
     top: 8px;
   }
 
+  .menuBtn span p{
+    position: absolute;
+    right: -100px;
+    /* display: none; */
+  }
+
 .nav_links{ 
     display: block;
     position: fixed;
     right: -100%;
-    top: 72px;
+    top: 68px;
     width: 200px;
     height: 310px;
     padding: 20px 0;
@@ -134,6 +141,11 @@ body > header{
     position: sticky;
     width: 100%;
     top: 0;
+}
+
+.active{
+    background-color: #ffcd05;
+    color: #171717;
 }
 
 .container1{
@@ -219,19 +231,21 @@ body > header{
 }
 
 .mainBtn{
-    background-color: #E8BC03;
-    padding: 15px;
+    background-color: #ffcd05;
     font-size: 18px;
     max-height: 50px;
-    box-shadow: 2px 2px 6px rgba(0,0,0,.4);
-    color: white;
+    box-shadow: 2px 2px 6px rgba(0,0,0,.3);
+    color: #171717;
     position: relative;
     text-align: center;
-    width: fit-content;
+    padding: 15px 32px;
+    cursor: pointer;
+    border-radius: 4px;
+    /* border: none; */
 }
 
 .btn1{
-    top: -10px;
+    top: -30%;
 }
 
 .main1, .main2, .main3{
@@ -244,7 +258,7 @@ body > header{
 }
 
 .main1Deco, .main2Deco, .main3Deco{
-    color: white;
+    color: #fff;
     align-items: start;
     justify-content: center;
     text-align: center;
@@ -254,6 +268,12 @@ body > header{
     grid-column: 2/span 3;
     font-family: Avenir, 'Times New Roman';
     letter-spacing: 2px;
+    
+}
+
+.main1Deco, .main3Deco{
+    background-color: rgba(0,0,0,.1);
+    height: fit-content;
 }
 
 .main2Deco{
@@ -292,10 +312,19 @@ a.contact:link, a.mainBtn:link{
     text-decoration: none;
 }
 
-a.mainBtn:visited{
+a.contact:hover{
+    background-color: #616161;
     color: white;
 }
 
+a.mainBtn:visited{
+    color: #171717;
+}
+
+a.mainBtn:hover{
+    color: white;
+    background-color: #E8BC03
+}
 
 .aboutContainer{
     display: grid;
@@ -307,7 +336,8 @@ a.mainBtn:visited{
 .aboutHeading{
     grid-template-columns: 1/span 2;
     z-index: 1;
-    background-image: rgba(255,255,255,0.5);
+    margin-left: 20px;
+    margin-top: 40px;
 }
 
 .aboutImg1{
@@ -347,11 +377,11 @@ a.mainBtn:visited{
     row-gap: 20px;
 }
 
-.portfolioText{
-    justify-content: center;
-    align-items: baseline;
-    font-size: 30px;
-    background-color: #E8BC03;
+.portfolioBtn{
+    font-size: 20px;
+    background-color: #ffcd05;
+    top: 70%;
+    left: 40%;
 }
 
 .portfolioUX, .portfolioImg1{
@@ -364,17 +394,51 @@ a.mainBtn:visited{
     grid-column: 1/-1;
 }
 
+.portfolioGraphictext, .portfolioUXtext{
+    grid-column: 1/-1;
+    text-align: center;
+    position: relative;
+    color: white;
+    font-size: 22px;
+    top: 20px;
+    background-color: rgba(0,0,0,.4);
+    height: fit-content;
+}
+
+.portfolioUXtext{grid-row: 1/span 1;}
+.portfolioGraphictext{grid-row: 2/span 1;}
+
 .portfolioImg1 img, .portfolioImg2 img{
     max-width: 100%;
+    filter:brightness(60%);
 }
 
-.portfolioText a:link, .portfolioText a:visited{
+.portfolioBtn a:link, .portfolioBtn a:visited{
     text-decoration: none;
-    color: white;
+    color: #171717;
 }
 
-.portfolioText a:hover{
-    font-weight: 700;
+.ux{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* flex-direction: row; */
+    
+}
+
+.ux img{
+    width: 30%;
+    display: inline-block;
+}
+
+.withU{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.withUtext{
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .gallery{
@@ -394,6 +458,46 @@ a.mainBtn:visited{
     box-shadow: 2px 2px 6px rgba(0,0,0,.1);
 }
 
+.page-link{
+    color:#171717;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.page-link:hover{
+    color:#171717;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+  
+input[type=submit] {
+    background-color: #616161;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #171717;
+}
+  
+.contactContainer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
 .footer{
     background-color: black;
     bottom: 0;
@@ -411,8 +515,10 @@ a.mainBtn:visited{
 
 .footIcon{
     text-align: center;
+}
+
+.footImg{
     margin-left: 15px;
-    margin-bottom: 10px;
 }
 
 @media screen and (min-width: 750px){
@@ -456,6 +562,11 @@ a.mainBtn:visited{
         color: white;
     }
 
+    .active{
+        background-color: #ffcd05;
+        color: #171717;
+    }
+
     .nav_items a:hover{
         color: #E8BC03;
         font-weight: 500;
@@ -485,11 +596,11 @@ a.mainBtn:visited{
     }
 
     .mainBtn{
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .btn1{
-        left: 200px;
+        left: 25%;
         top: -350px;
     }
 
@@ -499,15 +610,17 @@ a.mainBtn:visited{
     }
 
     .btn2{
-        right: 300px;
-        top: -130px;
+        right: 32%;
+        top: -150px;
     }
 
     .main2text{
-        grid-column: 2/span 1;
+        grid-column: 1/span 2;
         align-self: center;
         margin-left: 20px;
-        font-size: 20px;
+        margin-right: 20px;
+        font-size: 16px;
+        margin-bottom: 150px;
     }
 
     .main3, .main3Deco{
@@ -519,18 +632,20 @@ a.mainBtn:visited{
         margin-left: 50px;
         grid-column: 4/span 1;
         align-self: center;
-        font-size: 20px;
+        font-size: 16px;
+        margin-bottom: 100px;
     }
 
     .btn3{
-        top: -130px;
-        right: -340px;
+        top: -100px;
+        right: -32%;
     }
 
     .aboutHeading{
         grid-column: 3/span 1;
         grid-row: 1/span 1;
         font-size: 60px;
+        margin-top: 50px;
     }
 
     .aboutImg1{
@@ -560,12 +675,15 @@ a.mainBtn:visited{
         grid-column: 3/span 1;
         grid-row: 1/span 1;
     }
+    .resumeBtn{
+        margin-bottom: 50px;
+    }
 
     .portfolio{
         grid-template-columns: 1fr 1fr;
         margin: 20px 80px 80px 80px;
         column-gap: 20px;
-        height: 100%;
+        height: 550px;
     }
 
     .portfolioUX, .portfolioImg1{
@@ -579,8 +697,26 @@ a.mainBtn:visited{
     }
 
     .portfolioImg1 img, .portfolioImg2 img{
-        width:fit-content;
+        width: 100%;
         height: 100%;
+        object-fit: cover;
+    }
+
+    .portfolioUXtext, .portfolioGraphictext{
+        grid-row: 1/span 1;
+        top: 40px;
+        font-size: 26px;
+    }
+
+    .portfolioUXtext{
+        grid-column: 1/span 1;
+    }
+    .portfolioGraphictext{
+        grid-column: 2/span 1;
+    }
+
+    .portfolioBtn{
+        font-size: 26px;
     }
 
     .gallery{
