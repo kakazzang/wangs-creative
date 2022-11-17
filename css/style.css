@@ -97,7 +97,7 @@ header h5{
     top: 8px;
   }
 
-  .menuBtn span p{
+  .menuBtn > span p{
     position: absolute;
     right: -100px;
     /* display: none; */
@@ -144,8 +144,7 @@ body > header{
 }
 
 .active{
-    background-color: #ffcd05;
-    color: #171717;
+    text-decoration: underline;
 }
 
 .container1{
@@ -296,26 +295,31 @@ body > header{
     top: -290px
 }
 
-.contact{
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-    width: fit-content;
-    margin-bottom: 50px;
-}
-
-a.contact:link, a.contact:visited{
-    color: black;
-}
-
-a.contact:link, a.mainBtn:link{
+a.mainBtn:link{
     text-decoration: none;
 }
 
-a.contact:hover{
+/* .contact{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    left: 50%;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+
+.contact a:link, .contact a:visited{
+    color: black;
+}
+
+.contact a:link, a.mainBtn:link{
+    text-decoration: none;
+}
+
+.contact:hover{
     background-color: #616161;
     color: white;
-}
+} */
 
 a.mainBtn:visited{
     color: #171717;
@@ -338,17 +342,19 @@ a.mainBtn:hover{
     z-index: 1;
     margin-left: 20px;
     margin-top: 40px;
+    font-size: 60px;
 }
 
 .aboutImg1{
     grid-column: 2/span 3;
-    max-width: 80%;
+    max-width: 70%;
     align-self: end;
     justify-self: end;
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 
-.aboutImg2{
+/* .aboutImg2{
     display: none;
 }
 
@@ -358,16 +364,17 @@ a.mainBtn:hover{
 
 .aboutImg4{
     display: none;
-}
+} */
 
 .aboutContainer p{
     grid-column: 2/span 2;
 }
 
 .resumeBtn{
-    margin-top: 20px;
+    margin-top: 10px;
     grid-column: 2/span 2;
     justify-self: center;
+    margin-bottom: 20px;
 }
 
 .portfolio{
@@ -433,7 +440,8 @@ a.mainBtn:hover{
 
 .withU{
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .withUtext{
@@ -498,12 +506,16 @@ input[type=submit]:hover {
     padding: 20px;
 }
 
-.footer{
+footer {
+    position:relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     background-color: black;
+    color: white;
+    text-align: center;
     bottom: 0;
     width: 100%;
-    height: 80px;
-}
+  }
 
 .footer p{
     color: white;
@@ -513,12 +525,16 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-.footIcon{
-    text-align: center;
+footer a.social {
+    display: inline-block;
+    padding: 0 0.4rem;
+    color: white;
+    font-size: 1.2rem;
+    transition: all ease 0.5s;
 }
-
-.footImg{
-    margin-left: 15px;
+  
+footer a.social:hover {
+    color: darkgrey;
 }
 
 @media screen and (min-width: 750px){
@@ -563,8 +579,8 @@ input[type=submit]:hover {
     }
 
     .active{
-        background-color: #ffcd05;
-        color: #171717;
+        border-bottom: 3px solid white;
+        text-decoration: none;
     }
 
     .nav_items a:hover{
@@ -592,7 +608,7 @@ input[type=submit]:hover {
     .main1, .main1Deco{
         margin-left: 30px;
         grid-column: 1/span 3;
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .mainBtn{
@@ -606,7 +622,7 @@ input[type=submit]:hover {
 
     .main2, .main2Deco{
         grid-column: 3/span 2;
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .btn2{
@@ -625,7 +641,7 @@ input[type=submit]:hover {
 
     .main3, .main3Deco{
         grid-column: 2/span 2;
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .main3text{
@@ -644,16 +660,17 @@ input[type=submit]:hover {
     .aboutHeading{
         grid-column: 3/span 1;
         grid-row: 1/span 1;
-        font-size: 60px;
+        font-size: 80px;
         margin-top: 50px;
     }
 
     .aboutImg1{
         grid-column: 1/span 2;
         grid-row: 1/span 1;
+        max-width: 80%;
     }
 
-    .aboutImg2{
+    /* .aboutImg2{
         display: visible;
         grid-column: 3/span 2;
         grid-row: 1/span 1;
@@ -669,7 +686,7 @@ input[type=submit]:hover {
         display: visible;
         grid-column: 2/span 2;
         grid-row:3/span 1;
-    }
+    } */
 
     .aboutp1{
         grid-column: 3/span 1;
@@ -725,5 +742,43 @@ input[type=submit]:hover {
         column-gap: 20px;
         row-gap: 50px;
         margin: 30px 70px 30px 70px;
+    }
+}
+
+@media screen and (min-width:1100px){
+    .mainBtn, .contact{
+        font-size: 24px;
+    }
+
+    .main2text, .main3text{
+        font-size: 20px;
+    }
+
+    .main1Deco, .main2Deco, .main3Deco{
+        font-size: 26px;
+    }
+
+    .btn1{
+        top: -400px;
+    }
+
+    .btn2{
+        top: -220px;
+    }
+
+    .btn3{
+        top: -200px;
+    }
+
+    .aboutImg1{
+        max-width: 90%;
+    }
+
+    .aboutContainer p{
+        grid-area: 1/ 3/span 1/span 1;
+        align-self: end;
+        position: relative;
+        top: -150px;
+        margin-left: 30px;
     }
 }
