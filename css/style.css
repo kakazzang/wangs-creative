@@ -13,7 +13,7 @@ h5{
     font-weight: normal;
 }
 
-h2{
+.subh1{
     font-weight: normal;
     font-family: 'Avenir Next', 'Times New Roman';
     font-size: 26px;
@@ -772,13 +772,21 @@ footer a.social:hover {
 
     .aboutImg1{
         max-width: 90%;
+        grid-row: 1/span 3;
     }
 
     .aboutContainer p{
-        grid-area: 1/ 3/span 1/span 1;
-        align-self: end;
+        grid-column: 3/span 1;
+        align-self: center;
         position: relative;
-        top: -150px;
         margin-left: 30px;
+    }
+
+    .aboutp1{
+        grid-row: 2/span 1;
+    }
+
+    .aboutp2{
+        grid-row: 3/span 1;
     }
 }
