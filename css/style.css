@@ -100,6 +100,8 @@ header h5{
   .menuBtn > span p{
     position: absolute;
     right: -100px;
+    color: #000;
+    background-color: #fff;
     /* display: none; */
   }
 
@@ -243,6 +245,19 @@ body > header{
     /* border: none; */
 }
 
+.mainNum2, .mainNum3, .mainNum4{
+    font-weight: 800;
+    grid-row: 1/ span 1;
+    grid-column: 2/span 3;
+    text-align: center;
+    color: #fff;
+    margin-top: 150px;
+}
+
+.mainNum3{
+    color: #000;
+}
+
 .btn1{
     top: -30%;
 }
@@ -254,6 +269,10 @@ body > header{
     width: 100%;
     height: auto;
     grid-row: 1/span 1;
+}
+
+.main2{
+    filter: brightness(80%)
 }
 
 .main1Deco, .main2Deco, .main3Deco{
@@ -275,12 +294,8 @@ body > header{
     height: fit-content;
 }
 
-.main2Deco{
-    color: black;
-}
-
 .btn2{
-    top: -455px;
+    top: -505px;
 }
 
 .main2text, .main3text{
@@ -298,28 +313,6 @@ body > header{
 a.mainBtn:link{
     text-decoration: none;
 }
-
-/* .contact{
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-    left: 50%;
-    width: fit-content;
-    margin-bottom: 30px;
-}
-
-.contact a:link, .contact a:visited{
-    color: black;
-}
-
-.contact a:link, a.mainBtn:link{
-    text-decoration: none;
-}
-
-.contact:hover{
-    background-color: #616161;
-    color: white;
-} */
 
 a.mainBtn:visited{
     color: #171717;
@@ -425,12 +418,51 @@ a.mainBtn:hover{
     color: #171717;
 }
 
+.pages{
+    margin-top: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.previous {
+    background-color: #fff;
+    color: black;
+    padding: 8px 16px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 4px;
+    border: 1px solid #e5e3e3;
+    align-self: center;
+}
+
+a.previous:link{
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.previous:hover{
+    color: #E8BC03;
+    background-color: #616161;
+}
+
+.previous a:visited{
+    color: black;
+}
+
+ul{
+    margin-bottom: 0;
+}
+
+.pagination{
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
 .ux{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    /* flex-direction: row; */
-    
+    justify-content: center;  
 }
 
 .ux img{
@@ -468,8 +500,8 @@ a.mainBtn:hover{
 
 .page-link{
     color:#171717;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    align-self: center;
+    /* margin-top: 30px; */
 }
 
 .page-link:hover{
@@ -535,6 +567,11 @@ footer a.social {
   
 footer a.social:hover {
     color: darkgrey;
+}
+
+footer a.social p{
+    display: inline;
+    visibility: hidden;
 }
 
 @media screen and (min-width: 750px){
@@ -605,7 +642,7 @@ footer a.social:hover {
         letter-spacing: 4px;
     }
 
-    .main1, .main1Deco{
+    .main1, .main1Deco, .mainNum2{
         margin-left: 30px;
         grid-column: 1/span 3;
         font-size: 22px;
@@ -630,8 +667,9 @@ footer a.social:hover {
         top: -150px;
     }
 
-    .main2text{
+    .main2text, .mainNum3{
         grid-column: 1/span 2;
+        grid-row: 1/span 1;
         align-self: center;
         margin-left: 20px;
         margin-right: 20px;
@@ -644,12 +682,19 @@ footer a.social:hover {
         font-size: 22px;
     }
 
-    .main3text{
+    .main3text, .mainNum4{
         margin-left: 50px;
         grid-column: 4/span 1;
+        grid-row: 1/span 1;
         align-self: center;
         font-size: 16px;
         margin-bottom: 100px;
+    }
+
+    .mainNum3, .mainNum4{
+        color: #000;
+        align-self: start;
+        margin-top: 40px;
     }
 
     .btn3{
@@ -698,9 +743,9 @@ footer a.social:hover {
 
     .portfolio{
         grid-template-columns: 1fr 1fr;
-        margin: 20px 80px 80px 80px;
+        margin: 20px 60px 50px 60px;
         column-gap: 20px;
-        height: 550px;
+        height: 580px;
     }
 
     .portfolioUX, .portfolioImg1{
@@ -743,6 +788,20 @@ footer a.social:hover {
         row-gap: 50px;
         margin: 30px 70px 30px 70px;
     }
+
+    .pages{
+        margin-right: 50px;
+        margin-left: 50px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .pagination{
+        justify-content: end;
+        margin-bottom: 0;
+    }
+    .previous{
+        justify-content: start;
+    }
 }
 
 @media screen and (min-width:1100px){
@@ -763,11 +822,15 @@ footer a.social:hover {
     }
 
     .btn2{
-        top: -220px;
+        top: -300px;
     }
 
     .btn3{
         top: -200px;
+    }
+
+    .mainNum4, .mainNum3{
+        margin-top: 100px;
     }
 
     .aboutImg1{
@@ -788,5 +851,12 @@ footer a.social:hover {
 
     .aboutp2{
         grid-row: 3/span 1;
+    }
+
+    .portfolio{
+        grid-template-columns: 1fr 1fr;
+        margin: 20px 80px 50px 80px;
+        column-gap: 20px;
+        height: 580px;
     }
 }
