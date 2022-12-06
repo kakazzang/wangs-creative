@@ -466,12 +466,13 @@ ul{
 }
 
 .ux a{
-    width: 30%;
+    width: 50%;
     display: inline-block;
 }
 
 .ux a img{
-    width: 100%;
+    max-width: 100%;
+    height: 100%;
 }
 
 .withU{
@@ -743,6 +744,10 @@ footer a.social p{
     }
     .resumeBtn{
         margin-bottom: 50px;
+    }
+
+    .ux a{
+        width: 30%;
     }
 
     .portfolio{
