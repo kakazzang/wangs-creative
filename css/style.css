@@ -465,9 +465,13 @@ ul{
     justify-content: center;  
 }
 
-.ux img{
+.ux a{
     width: 30%;
     display: inline-block;
+}
+
+.ux a img{
+    width: 100%;
 }
 
 .withU{
